@@ -6,6 +6,7 @@ import com.cxy.dp.dto.Result;
 import com.cxy.dp.entity.UserInfo;
 import com.cxy.dp.service.IUserInfoService;
 import com.cxy.dp.service.IUserService;
+import com.cxy.dp.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,7 +65,7 @@ public class UserController {
     @GetMapping("/me")
     public Result me() {
         // TODO 获取当前登录的用户并返回
-        return Result.fail("功能未完成");
+        return Result.ok(UserHolder.getUser());
     }
 
     @GetMapping("/info/{id}")

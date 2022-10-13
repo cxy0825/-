@@ -19,6 +19,8 @@ spring:
         time-between-eviction-runs: 10s
   jackson:
     default-property-inclusion: non_null #JSON处理时候忽略非空字段
+  cache:
+    type: redis
 # 应用服务 WEB 访问端口
 server:
   port: 8081
